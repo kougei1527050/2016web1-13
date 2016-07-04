@@ -10,6 +10,9 @@ if(filename==='other.html'){
 }
 opt.selected=true;
 
+document.getElementById('form').select.onchange=function(){
+  location.href=document.getElementById('form').select.value;
+}
 
 
 
@@ -40,6 +43,3 @@ var refresh=function(){
 update();
 
 
-document.getElementById('form').select.onchange=function(){
-  location.href=document.getElementById('form').select.value;
-}

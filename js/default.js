@@ -10,7 +10,7 @@ return[sec,min,hours,days,month,year];
 
 var now =new Date();
 var counter =separate_time(now);
-decument.getElementById('countdown').textComent=
+document.getElementById('countdown').textComent=
 counter[5]+'年'+
 counter[4]+'月'+
 counter[3]+'日'+

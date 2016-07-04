@@ -1,15 +1,16 @@
 function setCookie(c_name,value,expiredays){
   var extime = new Date().getTime();
-  var cltime=new Date(extime+(60*60*24*1000*exoiredays));
+  var cltime=new Date(extime+(60*60*24*1000*expiredays));
   var exdate=cltime.toUTCString();
   var s="";
   s+=c_name+"="+escape(value);
-  s+="; expires=" +exdate+";";
-}else{
-  s+=";";
-}
-
-document.cookie=s;
+  s+="; path="+location.pathname;
+  if(expiredays){
+    s += "expires=" +exdate+"; ;
+  }else{
+    s+="; ";
+  }
+  document.cookie=s;
 }
 
 function getCookie(c_name){

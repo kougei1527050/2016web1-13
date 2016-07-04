@@ -31,7 +31,7 @@ function getCookie(c_name){
 var last_date=getCookie('lastDate');
 if(last_date){
   document.getElementById('cookie').textContent='前回訪れた時間：'+last_date;
-}eles{
+}else{
   document.getElementById('cookie').textContent='はじめまして';
 }
 var current_time=new Date();

@@ -22,3 +22,8 @@ var refresh=function(){
   setTimeout(update,1000);
 }
 update();
+
+document.getElementId('from').select.onchange=function(){
+  location.href=document.getElementById('from').select.value;
+  
+}
